@@ -3,10 +3,10 @@
 basiert auf dem Tutorial von Spring: https://spring.io/guides/gs/crud-with-vaadin/
 
 verwendet die folgenden Frameworks:
-- Apache POI, um Word-Dokumente zu erzeugen
-- https://github.com/opensagres/xdocreport von opensagres, um Word-Dokumente in XML-Format mit einem Java Model zu mergen und bei Bedarf PDF-Dokumente zu erzeugen
--- siehe auch https://github.com/opensagres/xdocreport/wiki/DocxReportingJavaMain
-- Velocity: Template Engine
+* Apache POI, um Word-Dokumente zu erzeugen
+* https://github.com/opensagres/xdocreport von opensagres, um Word-Dokumente in XML-Format mit einem Java Model zu mergen und bei Bedarf PDF-Dokumente zu erzeugen
+** siehe auch https://github.com/opensagres/xdocreport/wiki/DocxReportingJavaMain
+* Velocity: Template Engine
 
 siehe auch:
 https://git.zssi.ivbb.bund.de/registerfactory/rf-schreiben/-/blob/master/isy-schreiben/src/main/java/de/bund/bva/isyfact/schreiben/core/schreiben/impl/SchreibenVerwalterImpl.java
