@@ -2,8 +2,9 @@ package de.dfg.example.formschreiben;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.File;
 
-import com.lowagie.text.pdf.codec.Base64.InputStream;
 
 /**
  * Hello world!
@@ -16,6 +17,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         // klären InputStream in = new FileInputStream(new File(""));
+        InputStream in = new FileInputStream(new File(""));
 
     }
 }
