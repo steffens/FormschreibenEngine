@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.dfg.example.formschreiben</groupId>
@@ -16,9 +15,8 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <!-- xdocreport -->
-    <xdocreport.version>2.0.1</xdocreport.version>
+    <xdocreport.version>2.0.3</xdocreport.version>
   </properties>
-
 
 
   <dependencies>
@@ -29,9 +27,15 @@
       <scope>test</scope>
     </dependency>
     <!-- xdocreport -->
+   
     <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
-      <artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId>
+      <artifactId>fr.opensagres.xdocreport.document.docx</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
     <dependency>
@@ -41,13 +45,143 @@
     </dependency>
     <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.document.ods</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.converter.odt.odfdom</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.converter.docx.docx4j</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.document.odp</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.document.textstyling.wiki</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.remoting.resources.services.server</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.template.velocity</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.document.pptx</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.remoting.resources</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.remoting.converter</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.odfdom.converter.pdf</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.odfdom.converter.core</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.odfdom.converter.xhtml</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.poi.xwpf.converter.pdf</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.poi.xwpf.converter.xhtml</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.remoting.reporting.server</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.xdocreport.remoting.converter.server</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>fr.opensagres.odfdom.converter.pdf-gae</artifactId>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>fr.opensagres.poi.xwpf.converter.pdf-gae</artifactId>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.poi.xwpf.converter.xhtml-gae</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.web.servlet.view.xdocreport</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.poi.xwpf.converter.pdf.itext5</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.opensagres.xdocreport</groupId>
+      <artifactId>fr.opensagres.odfdom.converter.pdf.itext5</artifactId>
+      <version>${xdocreport.version}</version>
+    </dependency>
+  
+
+    <!-- logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.36</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.36</version>
+    </dependency>
+
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement>
+      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
