@@ -33,7 +33,7 @@
       <artifactId>fr.opensagres.xdocreport.document.docx</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
       <version>${xdocreport.version}</version>
@@ -52,13 +52,13 @@
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.converter.odt.odfdom</artifactId>
       <version>${xdocreport.version}</version>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.converter.docx.docx4j</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId>
       <version>${xdocreport.version}</version>
@@ -77,13 +77,13 @@
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.remoting.resources.services.server</artifactId>
       <version>${xdocreport.version}</version>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.template.velocity</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.document.pptx</artifactId>
       <version>${xdocreport.version}</version>
@@ -102,13 +102,13 @@
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.odfdom.converter.pdf</artifactId>
       <version>${xdocreport.version}</version>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.odfdom.converter.core</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.odfdom.converter.xhtml</artifactId>
       <version>${xdocreport.version}</version>
@@ -162,7 +162,7 @@
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.odfdom.converter.pdf.itext5</artifactId>
       <version>${xdocreport.version}</version>
-    </dependency>
+    </dependency> -->
   
 
     <!-- logging -->
