@@ -11,9 +11,22 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.File;
 
-
+/**
+ * Der Formschreibengenerator verwendet XDocReport zum Erzeugen einer MS Word Datei aus einem MS Word Template mit Platzhaltern.
+ * Der Formschreibengenerator verwendet den Apache Velocity Template Engine und ersetzt zwei Platzhalter im Word Template.
+ */
 public class FormschreibenGenerator {
 
+    /**
+     * erzeugt das Schreiben auf Basis des Templates
+     * 
+     * @param formschreibenTemplateName Verweis auf die Template-Datei (inkl. Pfad)
+     * @param outFileName Name der Ergebnisdatei
+     * @param personName erstes Attribut, welches den Platzhalter $name; im Word Tempalte ersetzt
+     * @param personAnrede zweites Attribut, welches den Platzhalter $anrede; im Word Template ersetzt
+ 
+     * @see XDdocReport
+     */
     public void erzeugeFromschreiben(String formschreibenTemplateName, String outFileName, String personName, String personAnrede) {
         
         try {
