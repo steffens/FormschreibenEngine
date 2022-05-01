@@ -18,22 +18,32 @@
     <xdocreport.version>2.0.3</xdocreport.version>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.8.2</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
+
     <!-- xdocreport -->
-   
     <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.document.docx</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-<!--    <dependency>
+    <!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
       <version>${xdocreport.version}</version>
@@ -58,7 +68,7 @@
       <artifactId>fr.opensagres.xdocreport.converter.docx.docx4j</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-<!--    <dependency>
+    <!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId>
       <version>${xdocreport.version}</version>
@@ -83,7 +93,7 @@
       <artifactId>fr.opensagres.xdocreport.template.velocity</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-<!--    <dependency>
+    <!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.xdocreport.document.pptx</artifactId>
       <version>${xdocreport.version}</version>
@@ -108,7 +118,7 @@
       <artifactId>fr.opensagres.odfdom.converter.core</artifactId>
       <version>${xdocreport.version}</version>
     </dependency>
-<!--    <dependency>
+    <!--    <dependency>
       <groupId>fr.opensagres.xdocreport</groupId>
       <artifactId>fr.opensagres.odfdom.converter.xhtml</artifactId>
       <version>${xdocreport.version}</version>
@@ -163,7 +173,7 @@
       <artifactId>fr.opensagres.odfdom.converter.pdf.itext5</artifactId>
       <version>${xdocreport.version}</version>
     </dependency> -->
-  
+
 
     <!-- logging -->
     <dependency>
@@ -221,6 +231,11 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <!-- surefire plugin -->
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.2</version>
         </plugin>
       </plugins>
     </pluginManagement>
