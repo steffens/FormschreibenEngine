@@ -32,7 +32,7 @@ public class FormschreibenGeneratorTest {
 
     @Test
     void succeedingTest() {
-        fsgen.erzeugeFromschreiben(outfilename, "Anja");
+        fsgen.erzeugeFromschreiben("ressources/Textbausteine_Korrespondenz_mit_Gutachtenden.docx", outfilename, "Fritzi", "geehrter");
         assertTrue(new File(outfilename).exists());
     }
 
