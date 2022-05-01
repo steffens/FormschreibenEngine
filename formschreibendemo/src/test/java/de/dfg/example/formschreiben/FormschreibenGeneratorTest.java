@@ -1,7 +1,5 @@
 package de.dfg.example.formschreiben;
 
-
-
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.File;
@@ -11,10 +9,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-
-
-
 
 public class FormschreibenGeneratorTest {
 
@@ -32,15 +26,18 @@ public class FormschreibenGeneratorTest {
 
     @Test
     void succeedingTest() {
-        fsgen.erzeugeFromschreiben("ressources/Textbausteine_Korrespondenz_mit_Gutachtenden.docx", outfilename, "Fritzi", "geehrter");
+        fsgen.erzeugeFromschreiben("ressources/Textbausteine_Korrespondenz_mit_Gutachtenden.docx",
+                outfilename,
+                "Fritzi",
+                "geehrter");
         assertTrue(new File(outfilename).exists());
     }
 
     @Test
     void testTest() {
-    assertTrue(true);
+        assertTrue(true);
     }
-    
+
     @AfterEach
     void tearDown() {
     }
