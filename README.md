@@ -15,7 +15,7 @@ https://git.zssi.ivbb.bund.de/registerfactory/rf-schreiben/-/blob/master/isy-sch
 1. Word Dokument erstellen
 2. Platzhalter als Merge-Field einfügen
 
-# Beispiel:
+# Beispiel
 
             // Template mit Platzhaltern laden
             InputStream in = new FileInputStream(
