@@ -17,49 +17,20 @@ https://git.zssi.ivbb.bund.de/registerfactory/rf-schreiben/-/blob/master/isy-sch
 
 # Beispiel:
 
-    @Test
-    public void testeErzeugeSchreiben() throws IOException {
+            // Template mit Platzhaltern laden
+            InputStream in = new FileInputStream(
+                        new File(formschreibenTemplateName));
+            
+            // Velocity Template Engine für Ersetzen von Platzhaltern initialisieren
+            IXDocReport report = XDocReportRegistry.getRegistry().loadReport(in, TemplateEngineKind.Velocity);
+            
+            //context laden und Attribute setzen
+            IContext context = report.createContext();
+            context.put("anrede", personAnrede);
+            context.put("name", personName);
 
-        final List<String> beispielauflistung = new ArrayList<>();
-        beispielauflistung.add("Ein Text. Soll: Position 1 | Ist: Position");
-        beispielauflistung.add("Ein Text. Soll: Position 2 | Ist: Position");
-        final String andere = "Herr";
-        final String vorname = "Rudolf";
-
-        final TestSchreibenDaten testSchreibenDaten = new TestSchreibenDaten(andere, vorname,
-            SchreibenListenelementUtil.konvertiereElementeZuListenelementen(beispielauflistung));
-        final WordSchreiben ausgabe = schreibenVerwalter.erzeugeSchreiben(testSchreibenDaten);
-        assertThat(ausgabe).isNotNull();
-        assertThat(ausgabe.getDocument()).isNotNull();
-        assertThat(ausgabe.getMimeType()).isNotNull();
-
-        // output the Schreiben
-        SchreibenTestfallUtil.schreibeSchreibenAufFestplatte(ausgabe, "testImportUndErzeugung.out", ".docx");
-
-        // Check the actual text against the expected text of the created Word-Schreiben
-        final String text = WordParser.extrahiereTextAusDocx(new ByteArrayInputStream(ausgabe.getDocument()));
-        final String unterschiede =
-            TextVergleich.vergleicheText(text, SollSchreibenInhalte.SCHREIBEN_TEST_INHALT, true);
-
-        assertThat(unterschiede).isNullOrEmpty();
-    }
-
-    @Test
-    public void testeErzeugePDFSchreiben() throws IOException {
-        final List<String> beispielauflistung = new ArrayList<>();
-        beispielauflistung.add("Ein Text. Soll: Position 1 | Ist: Position");
-        beispielauflistung.add("Ein Text. Soll: Position 2 | Ist: Position");
-        final String andere = "Herr";
-        final String vorname = "Rudolf";
-
-        final TestSchreibenDaten testSchreibenDaten = new TestSchreibenDaten(andere, vorname,
-            SchreibenListenelementUtil.konvertiereElementeZuListenelementen(beispielauflistung));
-        final WordSchreiben ausgabe = schreibenVerwalter.erzeugeSchreiben(testSchreibenDaten, OutputFormat.PDF);
-        assertThat(ausgabe).isNotNull();
-        assertThat(ausgabe.getDocument()).isNotNull();
-        assertThat(ausgabe.getMimeType()).isNotNull();
-
-        // output the Schreiben
-        SchreibenTestfallUtil.schreibeSchreibenAufFestplatte(ausgabe, "testImportUndErzeugung.out", ".pdf");
+            // Ergebnisdokument erzeugen und Platzhalter ersetzen
+            java.io.OutputStream out = new java.io.FileOutputStream(new File(outFileName));
+            report.process(context, out);
     }
 
