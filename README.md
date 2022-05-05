@@ -11,8 +11,11 @@ verwendet die folgenden Frameworks:
 siehe auch:
 https://git.zssi.ivbb.bund.de/registerfactory/rf-schreiben/-/blob/master/isy-schreiben/src/main/java/de/bund/bva/isyfact/schreiben/core/schreiben/impl/SchreibenVerwalterImpl.java
 
+# Erstellung des Word Templates
+1. Word Dokument erstellen
+2. Platzhalter als Merge-Field einfügen
 
-Beispiel:
+# Beispiel:
 
     @Test
     public void testeErzeugeSchreiben() throws IOException {
